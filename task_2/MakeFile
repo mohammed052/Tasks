@@ -1,0 +1,23 @@
+# Specify the compiler
+CC = g++
+
+# Source file(s)
+SRC = task2.cpp
+
+# Executable name
+PROJECT = Labyrinth
+
+# Compiler flags
+CFLAGS = -std=c++11 
+
+# Build target
+.PHONY: build
+build:
+	@echo "Building..."
+	@$(CC) $(SRC) -o $(PROJECT) $(CFLAGS)
+
+# Clean target
+.PHONY: clean
+clean:
+	@echo "Cleaning..."
+	@rm -rf $(PROJECT)
